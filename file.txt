@@ -1,0 +1,24 @@
+JVM can distribute threads across multiple cores, allowing true parallel execution of thread;
+Thread is a lightweight process, smallest unit of processing single process can run on multiple threads
+When java program start one thread runs immediately called main thread.
+
+
+To create a new thread in java you can either extend the Thread class or implement the runnable interface.
+if we extends thread then we can directly call start method but if we are using runnable then we have to create instance of Thread and the class both.
+
+When to use Thread and when to use Runnable?
+when a class already extending another class then we cant extends again with Thread class so we have to use Runnable.
+
+NEW:
+A thread is in the NEW state after it has been created but before it has been started. It is not yet alive and does not have any resources allocated to it.
+RUNNABLE:
+A thread enters the RUNNABLE state after its start() method is called. This state encompasses both the "ready" and "running" states from an operating system perspective. The thread is either currently executing or is eligible to be executed by the JVM.
+Running:
+BLOCKED:
+A thread enters the BLOCKED state when it tries to acquire a monitor lock on an object but the lock is already held by another thread. It remains in this state until the lock becomes available.
+WAITING:
+A thread enters the WAITING state when it calls the wait(), join(), or park() method. It remains in this state indefinitely until another thread performs a specific action, such as calling notify(), notifyAll(), or unparking the thread.
+TIMED_WAITING:
+A thread enters the TIMED_WAITING state when it calls the sleep(), wait(long timeout), join(long timeout), or parkNanos() or parkUntil() methods. It remains in this state for a specified amount of time or until another thread performs a specific action.
+TERMINATED:
+A thread enters the TERMINATED state after it has completed its execution or when an exception occurs that is not caught. It is no longer alive and cannot be restarted.

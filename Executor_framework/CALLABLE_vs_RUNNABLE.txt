@@ -1,0 +1,4 @@
+Callable can return something while runnable not
+Callable have call method while runnable have runnable
+we can do throws exception in call method; while cant in run;
+submit(runnable task,return)
